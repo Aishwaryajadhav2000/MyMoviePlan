@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row" style="margin-top: 2%;">
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <h5>MT Cinema</h5>
+        </div>
+
+        <div class="col">
+          <h5>About</h5>
+        </div>
+
+        <div class="col">
+          <h5>Contact</h5>
+        </div>
+
+        <div class="col">
+          <h5>View Movies </h5>
+        </div>
+
+        <div class="col">
+          <h5 (click)="addmovies()">Manage Movies </h5>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="row">
+        <div class="col" style="text-align: end;">
+          <h5 (click)="logout()">Logout</h5>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+  <hr>
+
+
+  <div class="row">
+    <div class="card-group" id="cardgroup">
+      <div *ngFor="let movie of movie" id="colu">
+
+        <div class="card" style="width: 18rem;" id="cardgroup">
+
+          <div class="row">
+            <div class="col-6" id="colimh">
+              <div *ngFor="let file of movie.movieImages">
+                <img class="card-img-top" [src]="file.url" id="image">
+              </div>
+            </div>
+
+            <div class="col-6">
+              <h4 class="card-title" id="title">{{movie.moviename}}</h4>
+            </div>
+
+          </div>
+
+
+
+          <div class="card-body">
+            <h5 class="card-text">{{movie.moviedescription}}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{movie.ticketprice}}</li>
+          </ul>
+
+          <div class="card-body">
+            <a class="card-link" (click)="editmovie(movie.movieid)">Edit</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+
+</div>

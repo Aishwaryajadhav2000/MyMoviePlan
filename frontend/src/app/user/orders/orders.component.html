@@ -1,0 +1,42 @@
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2></h2>
+            <div *ngFor="let movie of movie">
+                <div class="row" id="imag">
+                    <div>
+                        <div *ngFor="let file of movie.movieImages">
+                            <img [src]="file.url" style="height: 220px; width: 285px;">
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="col-6">
+            <div [(ngModel)]="bookmov.moviename" [ngModelOptions]="{standalone: true}">
+                <h1  >{{movies.moviename}}</h1> 
+            </div>
+            <hr>
+            <h3>{{movies.moviedescription}}</h3>
+            <hr>
+            <h2>Price: {{movies.ticketprice}}/-</h2>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <button (click)="bookmovie()">Proceed to Book</button>
+                </div>
+
+                <div class="col">
+                    <button (click)="explore()">Explore More</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

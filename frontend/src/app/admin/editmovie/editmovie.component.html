@@ -1,0 +1,90 @@
+<content style="text-align: center;">
+    <div class="card">
+        <form (ngSubmit)="submit()">
+            <div class="card-title">
+                <h3 class="h3">Edit Movie </h3>
+            </div>
+
+            <div class="row" id="moviename">
+                <div class="col">
+                    <label><b>Name:</b> </label>
+                </div>
+                <div class="col" id="input">
+                    <input placeholder="Movie Name" 
+                    [(ngModel)]="movies.moviename" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+           
+            <div class="row" id="moviename">
+                <div class="col">
+                    <label><b>Duration:</b> </label>
+                </div>
+                <div class="col" id="input">
+                    <input placeholder="Duration" 
+                    [(ngModel)]="movies.duration" [ngModelOptions]="{standalone: true}"
+                    >
+                </div>
+            </div>
+
+            <div class="row" id="moviename">
+                <div class="col">
+                    <label><b>Description:</b> </label>
+                </div>
+                <div class="col" id="input">
+                    <input placeholder="Enter Movie Description" 
+                    [(ngModel)]="movies.moviedescription" [ngModelOptions]="{standalone: true}"
+                    >
+                </div>
+            </div>
+
+            <div class="row" id="moviename">
+                <div class="col">
+                    <label><b>Price:</b> </label>
+                </div>
+                <div class="col" id="input">
+                    <input placeholder="0.00" 
+                    [(ngModel)]="movies.ticketprice" [ngModelOptions]="{standalone: true}"
+                    >
+                </div>
+            </div>
+
+            <div class="row" id="moviename">
+                <div class="col">
+                    <label><b>Tickets:</b> </label>
+                </div>
+                <div class="col" id="input">
+                    <input placeholder="0" >
+                </div>
+            </div>
+
+            <div class="row" id="moviename">
+                <div class="col">
+                    <label><b>Upload movie:</b> </label>
+                </div>
+                <div class="col" id="input">
+                    <input  type="file" multiple value="select" #selectFile (change)="onFileSelect($event)">
+                </div>
+            </div>
+
+            <div class="row" id="moviename">
+                <div class="col">
+                    <label><b>Category:</b> </label>
+                </div>
+                <div class="col" id="input">
+                    <select name="movie" class="input" 
+                    [(ngModel)]="movies.category" [ngModelOptions]="{standalone: true}"
+                    >
+                        <option value="action">Action</option>
+                        <option value="horror">Horror</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="button">
+                <button type="submit">Update Movie</button>
+            </div>
+            
+        </form>
+
+    </div>
+</content>

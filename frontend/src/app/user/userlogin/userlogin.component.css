@@ -1,0 +1,50 @@
+.card{
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;   
+}
+.h3{
+    color: white;
+    margin-top: 2%;
+   
+}
+.email{
+    margin-top: 4%;
+   font-size: larger;
+}
+
+.Password{
+    margin-top: 4%;
+   font-size: larger;
+}
+.btn{
+    margin-top: 4%;
+}
+.log{
+    background-color: cornflowerblue;
+color: white;
+}
+.input{
+    margin-left: 2%;
+}
+
+.card-title{
+    background-color: cornflowerblue;
+    height: 60px;
+   
+}
+.p{
+    text-align: end;
+}
+.pr{
+    margin-right: 2%;
+}
+.header{
+    text-align: center;
+    margin-top: 3%;
+}
+
+
+
+
+

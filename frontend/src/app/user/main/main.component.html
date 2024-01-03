@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row"  >
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <h5>MT Cinema</h5>
+        </div>
+
+        <div class="col">
+          <h5>About</h5>
+        </div>
+
+        <div class="col">
+          <h5>Contact</h5>
+        </div>
+
+        <div class="col">
+          <h5>View Movies </h5>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="row">
+        <div class="col" style="text-align: end;">
+          <h5 (click)="register()">Sign Up</h5>
+        </div>
+
+        <div class="col" style="text-align: center;">
+          <h5 (click)="login()">Login</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>first column</h1>
+    </div>
+
+    <div class="col-8">
+      <div>
+        <img src="../../../assets/frontimage1.jpg" class="image">
+      </div>
+    </div>
+    <br>
+
+
+  </div>
+  <hr>
+
+  <div style="text-align:  center;">
+    <h4>Booked Your Favourite Movie here..</h4>
+  </div>
+  <br>
+
+
+
+
+  <div class="row">
+    <div class="card-group" id="cardgroup">
+      <div *ngFor="let movie of movie" id="colu">
+  
+        <div class="card" style="width: 18rem;" id="cardgroup">
+  
+          <div class="row" id="imag">
+            <div >
+              <div *ngFor="let file of movie.movieImages">
+                <img [src]="file.url" style="height: 220px; width: 285px;">
+              </div>
+            </div>
+  
+  
+          </div>
+          <div >
+            <h4  class="moviename">{{movie.moviename}}</h4>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

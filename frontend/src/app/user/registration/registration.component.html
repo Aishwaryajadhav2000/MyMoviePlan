@@ -1,0 +1,93 @@
+<section class="vh-100 gradient-custom">
+
+
+    <div class="card-body p-4 p-md-5">
+        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">New User ? Register Here..</h3>
+        <form (ngSubmit)="submit()" [formGroup]="register">
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                        <input [(ngModel)]="user.firstname" formControlName="firstname" type="text"
+                            class="form-control form-control-lg" />
+                        <label class="form-label">First Name</label>
+                        <div id="required">
+                            <label
+                                *ngIf="register.controls['firstname'].invalid && register.controls['firstname'].touched">
+                                <small class="invalid" *ngIf="register.controls['firstname'].errors['required']">First
+                                    name is
+                                    required.</small>
+                            </label>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <input [(ngModel)]="user.lastname" type="text" formControlName="lastname"
+                            class="form-control form-control-lg" />
+                        <label class="form-label" for="lastName">Last Name</label>
+                        <div id="required">
+                            <label
+                                *ngIf="register.controls['lastname'].invalid && register.controls['lastname'].touched">
+                                <small class="invalid" *ngIf="register.controls['lastname'].errors['required']">Last
+                                    name is
+                                    required.</small>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                    <div class="form-outline">
+                        <input [(ngModel)]="user.useremailid" [ngModelOptions]="{standalone: true}" type="email"
+                            id="emailAddress" class="form-control form-control-lg" />
+                        <label class="form-label" for="emailAddress">Email</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                        <input [(ngModel)]="user.password" formControlName="password" id="phoneNumber"
+                            class="form-control form-control-lg" />
+                        <label class="form-label">Create Password</label>
+                        <div id="required">
+                            <label
+                                *ngIf="register.controls['password'].invalid && register.controls['password'].touched">
+                                <small class="invalid" *ngIf="register.controls['password'].errors['required']">Last
+                                    name is
+                                    required.</small>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="mt-4 pt-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit" [disabled]="register.invalid" />
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+</section>
